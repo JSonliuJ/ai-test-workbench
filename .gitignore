@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+.vite/
+*.local
+
+# 编辑器 / IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# MCP / 浏览器录制产物
+.playwright-mcp/
+.playwright-cli/
+debug.log
+*.log
+
+# Claude Code 本地配置
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/doc/**/.playwright-cli/
+.claude/skills/.git.bak/
+
+# 系统
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/

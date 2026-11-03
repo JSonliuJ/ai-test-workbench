@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <title>用户登录</title>
+</head>
+<body>
+    <main class="login-page">
+        <section class="login-card">
+            <header class="login-card__header">
+                <h1 class="login-card__title">欢迎回来</h1>
+                <p class="login-card__subtitle">请登录您的账户以继续</p>
+            </header>
+
+            <div class="login-card__alert login-card__alert--error" role="alert" hidden>
+                <span class="login-card__alert-icon"></span>
+                <span class="login-card__alert-text"></span>
+            </div>
+
+            <div class="login-card__alert login-card__alert--success" role="alert" hidden>
+                <span class="login-card__alert-icon"></span>
+                <span class="login-card__alert-text"></span>
+            </div>
+
+            <form class="login-form" id="loginForm" novalidate>
+                <div class="login-form__group">
+                    <label for="username" class="login-form__label">用户名 / 邮箱</label>
+                    <div class="login-form__input-wrapper">
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            class="login-form__input"
+                            placeholder="请输入用户名或邮箱"
+                            autocomplete="username"
+                            required
+                        >
+                        <svg class="login-form__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="login-form__group">
+                    <label for="password" class="login-form__label">密码</label>
+                    <div class="login-form__input-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="login-form__input"
+                            placeholder="请输入密码"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <svg class="login-form__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <button type="button" class="login-form__toggle" id="togglePassword" aria-label="切换密码可见性">
+                            <svg class="login-form__toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-form__options">
+                    <label class="login-form__checkbox-wrapper">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="login-form__checkbox-custom">
+                            <svg class="login-form__checkbox-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </span>
+                        <span class="login-form__checkbox-label">记住我</span>
+                    </label>
+                    <a href="#" class="login-form__link">忘记密码？</a>
+                </div>
+
+                <button type="submit" class="login-form__btn" id="submitBtn">
+                    <span class="login-form__btn-text">登 录</span>
+                    <span class="login-form__btn-loader" hidden>
+                        <span class="login-form__spinner"></span>
+                        <span>登录中...</span>
+                    </span>
+                </button>
+            </form>
+
+            <footer class="login-card__footer">
+                <p>还没有账户？<a href="#" class="login-card__signup-link">立即注册</a></p>
+            </footer>
+        </section>
+    </main>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
